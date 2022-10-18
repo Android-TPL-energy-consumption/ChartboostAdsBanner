@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AdsBannerTemplate</string>
+    <string name="app_name">ChartboostAdsBanner</string>
+    <string name="appId">YOUR_APP_ID_HERE</string>
+    <string name="appSignature">YOUR_APP_SIGNATURE_HERE</string>
 </resources>
