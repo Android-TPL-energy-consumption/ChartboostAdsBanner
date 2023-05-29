@@ -22,6 +22,8 @@ import com.chartboost.sdk.events.ImpressionEvent;
 import com.chartboost.sdk.events.ShowError;
 import com.chartboost.sdk.events.ShowEvent;
 import com.chartboost.sdk.events.StartError;
+import com.chartboost.sdk.privacy.model.DataUseConsent;
+import com.chartboost.sdk.privacy.model.GDPR;
 
 public class MainActivity extends AppCompatActivity  {
     Banner chartboostBanner;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Chartboost.addDataUseConsent(getApplicationContext(), new GDPR(GDPR.GDPR_CONSENT.BEHAVIORAL));
         Chartboost.startWithAppId(getApplicationContext(), getResources().getString(R.string.appId), getResources().getString(R.string.appSignature), new StartCallback() {
             @Override
             public void onStartCompleted(@Nullable StartError startError) {
