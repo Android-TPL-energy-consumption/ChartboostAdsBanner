@@ -3,6 +3,10 @@
 This is a minimal application, only featuring an activity. It is meant to be
 cloned to study Chartboost SDK performance.
 
+## Setup
+
+Before launching the app, you **must** setup your Chartboost configuration in the `app/src/main/res/values/strings.xml` file.
+
 ## Scenario
 
 The `scenario.sh` script allows you to automatically run the application.
